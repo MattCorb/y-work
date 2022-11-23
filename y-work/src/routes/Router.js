@@ -7,7 +7,7 @@ const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 /***** Pages ****/
 
 const Starter = lazy(() => import("../views/Starter.js"));
-const About = lazy(() => import("../views/About.js"));
+const Apply = lazy(() => import("../views/Apply.js"));
 const Test = lazy(() => import("../views/Test.js"));
 const Test2 = lazy(() => import("../views/Test2.js"));
 const Alerts = lazy(() => import("../views/ui/Alerts"));
@@ -30,7 +30,7 @@ const ThemeRoutes = [
       { path: "/test", exact: true, element: <Test /> },
       { path: "/test2", exact: true, element: <Test2 /> },
       { path: "/starter", exact: true, element: <Starter /> },
-      { path: "/about", exact: true, element: <About /> },
+      { path: "/apply", exact: true, element: <Apply /> },
       { path: "/alerts", exact: true, element: <Alerts /> },
       { path: "/badges", exact: true, element: <Badges /> },
       { path: "/buttons", exact: true, element: <Buttons /> },
