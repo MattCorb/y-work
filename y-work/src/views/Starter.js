@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Button,
   ButtonGroup,
@@ -35,6 +36,7 @@ class Starter extends React.Component {
 
   render() {
     const { isLoaded, items } = this.state;
+    
     if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
@@ -74,7 +76,9 @@ class Starter extends React.Component {
                     </p>
                   </CardText>
                   <div>
-                    <Button color="info">Apply to Job</Button>
+                    <Link to="/apply" className="btn btn-info">
+                      Apply
+                    </Link>
                   </div>
                 </Card>
               </Col>
