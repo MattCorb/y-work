@@ -10,9 +10,6 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx:latest
+EXPOSE 3000
 
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /react-app/build /usr/share/nginx/html
-RUN ["chmod", "+x", "/docker-entrypoint.sh"]
-ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
+CMD [ "npx", "serve", "build" ]
