@@ -75,7 +75,7 @@ class Starter extends React.Component {
                     </p>
                   </CardText>
                   <div>
-                    <Button color="info">Apply to Job</Button>
+                    <Button color="info">Apply to a Job</Button>
                   </div>
                 </Card>
               </Col>
