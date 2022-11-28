@@ -1,33 +1,33 @@
 import { Button, Nav, NavItem } from "reactstrap";
 import { Link, useLocation } from "react-router-dom";
 import user1 from "../assets/images/users/user4.jpg";
-import probg from "../assets/images/bg/download.jpg";
+import probg from "../assets/images/bg/download.jpg" ;
 
 const navigation = [
   {
-    title: "Dashboard",
+    title: "Job Postings",
     href: "/starter",
-    icon: "bi bi-speedometer2",
+    icon: "bi bi-grid",
   },
   {
-    title: "Alert",
+    title: "Saved Jobs",
     href: "/alerts",
-    icon: "bi bi-bell",
+    icon: "bi bi-star",
   },
   {
-    title: "Badges",
+    title: "Recommendations",
     href: "/badges",
     icon: "bi bi-patch-check",
   },
   {
-    title: "Buttons",
+    title: "Applications",
     href: "/buttons",
     icon: "bi bi-hdd-stack",
   },
   {
-    title: "Cards",
+    title: "Your Info",
     href: "/cards",
-    icon: "bi bi-card-text",
+    icon: "bi bi-people",
   },
   {
     title: "Grid",
@@ -98,15 +98,6 @@ const Sidebar = () => {
               </Link>
             </NavItem>
           ))}
-          <Button
-            color="danger"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://wrappixel.com/templates/materialpro-react-admin/?ref=33"
-          >
-            Upgrade To Pro
-          </Button>
         </Nav>
       </div>
     </div>

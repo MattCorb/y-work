@@ -14,7 +14,7 @@ import {
   Button,
 } from "reactstrap";
 import Logo from "./Logo";
-import { ReactComponent as LogoWhite } from "../assets/images/logos/materialprowhite.svg";
+import { ReactComponent as LogoWhite } from "../assets/images/logos/materialpro.svg";
 import user1 from "../assets/images/users/user4.jpg";
 
 const Header = () => {
@@ -65,14 +65,14 @@ const Header = () => {
         <Nav className="me-auto" navbar>
           <NavItem>
             <Link to="/starter" className="nav-link">
-              Starter
+              Job Listings
             </Link>
           </NavItem>
-          <NavItem>
+          {/* <NavItem>
             <Link to="/about" className="nav-link">
               About
             </Link>
-          </NavItem>
+          </NavItem> */}
           <UncontrolledDropdown inNavbar nav>
             <DropdownToggle caret nav>
               DD Menu
