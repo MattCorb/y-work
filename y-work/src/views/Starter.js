@@ -76,7 +76,7 @@ class Starter extends React.Component {
                     </p>
                   </CardText>
                   <div>
-                    <Link to="/apply" className="btn btn-info">
+                    <Link to="/apply" className="btn btn-primary">
                       Apply
                     </Link>
                   </div>

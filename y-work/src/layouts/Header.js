@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 import Logo from "./Logo";
 import { ReactComponent as LogoWhite } from "../assets/images/logos/materialpro.svg";
-import user1 from "../assets/images/users/user4.jpg";
+import user5 from "../assets/images/users/user5.jpg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -73,7 +73,7 @@ const Header = () => {
               About
             </Link>
           </NavItem> */}
-          <UncontrolledDropdown inNavbar nav>
+          {/* <UncontrolledDropdown inNavbar nav>
             <DropdownToggle caret nav>
               DD Menu
             </DropdownToggle>
@@ -83,12 +83,12 @@ const Header = () => {
               <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
+          </UncontrolledDropdown> */}
         </Nav>
-        <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+        {/* <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="transparent">
             <img
-              src={user1}
+              src={user5}
               alt="profile"
               className="rounded-circle"
               width="30"
@@ -103,7 +103,7 @@ const Header = () => {
             <DropdownItem>Inbox</DropdownItem>
             <DropdownItem>Logout</DropdownItem>
           </DropdownMenu>
-        </Dropdown>
+        </Dropdown> */}
       </Collapse>
     </Navbar>
   );
