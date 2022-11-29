@@ -20,30 +20,30 @@ const Forms = lazy(() => import("../views/ui/Forms"));
 const Breadcrumbs = lazy(() => import("../views/ui/Breadcrumbs"));
 const Applications = lazy(() => import("../views/Applications.js"));
 
-
 /*****Routes******/
 
 const ThemeRoutes = [
-  {
-    path: "/",
-    element: <FullLayout />,
-    children: [
-      { path: "/", element: <Navigate to="/starter" /> },
-      { path: "/test", exact: true, element: <Test /> },
-      { path: "/test2", exact: true, element: <Test2 /> },
-      { path: "/starter", exact: true, element: <Starter /> },
-      { path: "/apply", exact: true, element: <Apply /> },
-      { path: "/alerts", exact: true, element: <Alerts /> },
-      { path: "/badges", exact: true, element: <Badges /> },
-      { path: "/buttons", exact: true, element: <Buttons /> },
-      { path: "/cards", exact: true, element: <Cards /> },
-      { path: "/grid", exact: true, element: <Grid /> },
-      { path: "/table", exact: true, element: <Tables /> },
-      { path: "/forms", exact: true, element: <Forms /> },
-      { path: "/breadcrumbs", exact: true, element: <Breadcrumbs /> },
-      { path: "/applications", exact: true, element: <Applications /> },
-    ],
-  },
+    {
+        path: "/",
+        element: <FullLayout />,
+        children: [
+            { path: "/", element: <Navigate to="/starter" /> },
+            { path: "/test", exact: true, element: <Test /> },
+            { path: "/test2", exact: true, element: <Test2 /> },
+            { path: "/starter/*", exact: true, element: <Starter /> },
+            { path: "/apply", exact: true, element: <Apply /> },
+            // { path: "/apply/:opening_id", exact: true, element: <Apply /> },
+            { path: "/alerts", exact: true, element: <Alerts /> },
+            { path: "/badges", exact: true, element: <Badges /> },
+            { path: "/buttons", exact: true, element: <Buttons /> },
+            { path: "/cards", exact: true, element: <Cards /> },
+            { path: "/grid", exact: true, element: <Grid /> },
+            { path: "/table", exact: true, element: <Tables /> },
+            { path: "/forms", exact: true, element: <Forms /> },
+            { path: "/breadcrumbs", exact: true, element: <Breadcrumbs /> },
+            { path: "/applications", exact: true, element: <Applications /> },
+        ],
+    },
 ];
 
 export default ThemeRoutes;
