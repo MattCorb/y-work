@@ -113,7 +113,7 @@ class Starter extends React.Component {
                                     </CardText>
                                     <div>
                                         <Link
-                                            to="/apply"
+                                            to={`/apply/?job=${item.opening_id}`}
                                             className="btn btn-info"
                                         >
                                             Apply
