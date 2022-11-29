@@ -64,7 +64,7 @@ const Header = () => {
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
           <NavItem>
-            <Link to="/starter" className="nav-link">
+            <Link to="/starter" className="nav-link active">
               Job Listings
             </Link>
           </NavItem>
@@ -85,14 +85,18 @@ const Header = () => {
             </DropdownMenu>
           </UncontrolledDropdown> */}
         </Nav>
-        {/* <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-          <DropdownToggle color="transparent">
-            <img
+        <span style={{color:'white', padding:'7px', fontSize:'12px'}}>
+          dan.smith@byu.edu
+          </span>
+        <img
               src={user5}
               alt="profile"
               className="rounded-circle"
               width="30"
             ></img>
+        {/* <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+          <DropdownToggle color="transparent">
+            
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem header>Info</DropdownItem>
