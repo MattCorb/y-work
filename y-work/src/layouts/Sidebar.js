@@ -1,7 +1,7 @@
 import { Button, Nav, NavItem } from "reactstrap";
 import { Link, useLocation } from "react-router-dom";
-import user1 from "../assets/images/users/user4.jpg";
-import probg from "../assets/images/bg/download.jpg" ;
+import user5 from "../assets/images/users/user5.jpg";
+import probg from "../assets/images/bg/byuSign.jpeg" ;
 
 const navigation = [
   {
@@ -29,31 +29,31 @@ const navigation = [
     href: "/cards",
     icon: "bi bi-people",
   },
-  {
-    title: "Grid",
-    href: "/grid",
-    icon: "bi bi-columns",
-  },
-  {
-    title: "Table",
-    href: "/table",
-    icon: "bi bi-layout-split",
-  },
-  {
-    title: "Forms",
-    href: "/forms",
-    icon: "bi bi-textarea-resize",
-  },
-  {
-    title: "Breadcrumbs",
-    href: "/breadcrumbs",
-    icon: "bi bi-link",
-  },
-  {
-    title: "About",
-    href: "/about",
-    icon: "bi bi-people",
-  },
+  // {
+  //   title: "Grid",
+  //   href: "/grid",
+  //   icon: "bi bi-columns",
+  // },
+  // {
+  //   title: "Table",
+  //   href: "/table",
+  //   icon: "bi bi-layout-split",
+  // },
+  // {
+  //   title: "Forms",
+  //   href: "/forms",
+  //   icon: "bi bi-textarea-resize",
+  // },
+  // {
+  //   title: "Breadcrumbs",
+  //   href: "/breadcrumbs",
+  //   icon: "bi bi-link",
+  // },
+  // {
+  //   title: "About",
+  //   href: "/about",
+  //   icon: "bi bi-people",
+  // },
 ];
 
 const Sidebar = () => {
@@ -67,10 +67,10 @@ const Sidebar = () => {
       <div className="d-flex align-items-center"></div>
       <div
         className="profilebg"
-        style={{ background: `url(${probg}) no-repeat` }}
+        style={{ background: `url(${probg}) no-repeat center`, backgroundSize: '100%'}}
       >
         <div className="p-3 d-flex">
-          <img src={user1} alt="user" width="50" className="rounded-circle" />
+          <img src={user5} alt="user" width="50" className="rounded-circle" />
           <Button
             color="white"
             className="ms-auto text-white d-lg-none"
@@ -79,7 +79,7 @@ const Sidebar = () => {
             <i className="bi bi-x"></i>
           </Button>
         </div>
-        <div className="bg-dark text-white p-2 opacity-75">Steave Rojer</div>
+        <div className="bg-dark text-white p-2 opacity-75">Dan Smith</div>
       </div>
       <div className="p-3 mt-2">
         <Nav vertical className="sidebarNav">

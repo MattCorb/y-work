@@ -43,95 +43,58 @@ class Starter extends React.Component {
             });
     }
 
-    render() {
-        const { isLoaded, items } = this.state;
-
-        if (!isLoaded) {
-            return <div>Loading...</div>;
-        } else {
-            return (
-                <div>
-                    <Row>
-                        {items.map((item) => (
-                            <Col md="12" lg="6">
-                                <Card
-                                    body
-                                    className="text-end"
-                                    key={item.opening_id}
-                                >
-                                    <CardTitle
-                                        tag="h5"
-                                        className="border-bottom"
-                                    >
-                                        {item.posting_title}
-                                    </CardTitle>
-                                    <CardText className="">
-                                        <p>
-                                            <span
-                                                style={{
-                                                    fontWeight: "bold",
-                                                    float: "left",
-                                                }}
-                                            >
-                                                Wage:
-                                            </span>
-                                            ${item.min_salary}-$
-                                            {item.max_salary}
-                                        </p>
-                                        <p>
-                                            <span
-                                                style={{
-                                                    fontWeight: "bold",
-                                                    float: "left",
-                                                }}
-                                            >
-                                                Department:
-                                            </span>
-                                            {item.department}
-                                        </p>
-                                        <p>
-                                            <span
-                                                style={{
-                                                    fontWeight: "bold",
-                                                    float: "left",
-                                                }}
-                                            >
-                                                Category:
-                                            </span>{" "}
-                                            {item.category_name}
-                                        </p>
-                                        <p>
-                                            <span
-                                                style={{
-                                                    fontWeight: "bold",
-                                                    float: "left",
-                                                }}
-                                            >
-                                                Start Date:
-                                            </span>{" "}
-                                            {item.start_date}
-                                        </p>
-                                    </CardText>
-                                    <div>
-                                        <img
-                                            src={`${item.img}`}
-                                            height="50px"
-                                            style={{ float: "left" }}
-                                        ></img>
-                                        <Link
-                                            to={`/apply?job=${item.opening_id}`}
-                                            className="btn btn-info"
-                                        >
-                                            Apply
-                                        </Link>
-                                    </div>
-                                </Card>
-                            </Col>
-                        ))}
-                    </Row>
-                </div>
-            );
-        }
+  render() {
+    const { isLoaded, items } = this.state;
+    
+    if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <div>
+          <Row>
+            {items.map((item) => (
+              <Col md="12" lg="6">
+                <Card body className="text-end">
+                  <CardTitle tag="h5" className="border-bottom">
+                    {item.posting_title}
+                  </CardTitle>
+                  <CardText key={item.opening_id} className="">
+                    <p>
+                      <span style={{ fontWeight: "bold", float: "left" }}>
+                        Wage:
+                      </span>
+                      ${item.min_salary}-${item.max_salary}
+                    </p>
+                    <p>
+                      <span style={{ fontWeight: "bold", float: "left" }}>
+                        Department:
+                      </span>
+                      {item.department}
+                    </p>
+                    <p>
+                      <span style={{ fontWeight: "bold", float: "left" }}>
+                        Category:
+                      </span>{" "}
+                      {item.category_name}
+                    </p>
+                    <p>
+                      <span style={{ fontWeight: "bold", float: "left" }}>
+                        Start Date:
+                      </span>{" "}
+                      {item.start_date}
+                    </p>
+                  </CardText>
+                  <div>
+                    <Link to="/apply" className="btn btn-info">
+                      Apply
+                    </Link>
+                  </div>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      );
     }
 }
 
