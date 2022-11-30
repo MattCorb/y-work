@@ -10,7 +10,7 @@ const Starter = lazy(() => import("../views/Starter.js"));
 const Apply = lazy(() => import("../views/Apply.js"));
 const Test = lazy(() => import("../views/Test.js"));
 const Test2 = lazy(() => import("../views/Test2.js"));
-const Alerts = lazy(() => import("../views/ui/Alerts"));
+const Alerts = lazy(() => import("../views/Alerts"));
 const Badges = lazy(() => import("../views/ui/Badges"));
 const Buttons = lazy(() => import("../views/ui/Buttons"));
 const Cards = lazy(() => import("../views/ui/Cards"));
