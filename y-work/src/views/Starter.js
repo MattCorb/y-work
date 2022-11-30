@@ -56,6 +56,20 @@ class Starter extends React.Component {
                         {items.map((item) => (
                             <Col md="12" lg="6">
                                 <Card body className="text-end">
+                                    <img
+                                        src={`${item.img}`}
+                                        height="150px"
+                                        width="auto"
+                                        style={{
+                                            float: "left",
+                                            // margin: "auto",
+                                            // marginTop: "30px",
+                                            marginBottom: "10px",
+                                            border: "2px solid black",
+                                            // borderRadius: "25px",
+                                            objectFit: "cover"
+                                        }}
+                                    ></img>
                                     <CardTitle
                                         tag="h5"
                                         className="border-bottom"
@@ -125,7 +139,7 @@ class Starter extends React.Component {
                                     <div>
                                         <Link
                                             to={`/apply/?job=${item.opening_id}`}
-                                            className="btn btn-info"
+                                            className="btn btn-primary"
                                         >
                                             Apply
                                         </Link>

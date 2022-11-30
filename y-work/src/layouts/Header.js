@@ -89,14 +89,21 @@ const Header = () => {
             </DropdownMenu>
           </UncontrolledDropdown> */}
                 </Nav>
+
+                <span
+                    style={{ color: "white", padding: "7px", fontSize: "12px" }}
+                >
+                    dan.smith@byu.edu
+                </span>
+                <img
+                    src={user5}
+                    alt="profile"
+                    className="rounded-circle"
+                    width="30"
+                ></img>
                 {/* <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="transparent">
-            <img
-              src={user5}
-              alt="profile"
-              className="rounded-circle"
-              width="30"
-            ></img>
+            
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem header>Info</DropdownItem>
