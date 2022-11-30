@@ -150,7 +150,7 @@ const Apply = () => {
                                     <br />
                                     <Button
                                         className="mt-3 btn btn-secondary"
-                                        color="primary"
+                                        color="success"
                                         href="https://wrappixel.com/templates/materialpro-react-admin/?ref=33"
                                         target="_blank"
                                     >
