@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Card, CardBody, CardTitle, Button } from "reactstrap";
+import {
+    Row,
+    Col,
+    Card,
+    CardBody,
+    CardTitle,
+    Button,
+    Breadcrumb,
+    BreadcrumbItem,
+} from "reactstrap";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const Apply = () => {
@@ -40,8 +50,9 @@ const Apply = () => {
                     {/* --------------------------------------------------------------------------------*/}
                     <Card>
                         <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-                            <i className="bi bi-star me-2"> </i>
-                            Application
+                            <i className="bi bi-star me-2 p-2"> </i>
+                            <Link to="/starter">All Jobs</Link> / Application to{" "}
+                            {item.posting_title}
                         </CardTitle>
                         <CardBody className="p-4" key={item.opening_id}>
                             <Row justify-content>
@@ -139,7 +150,7 @@ const Apply = () => {
                                     <br />
                                     <Button
                                         className="mt-3 btn btn-secondary"
-                                        color="success"
+                                        color="primary"
                                         href="https://wrappixel.com/templates/materialpro-react-admin/?ref=33"
                                         target="_blank"
                                     >

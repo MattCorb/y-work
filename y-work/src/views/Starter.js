@@ -10,6 +10,7 @@ import {
     Col,
     CardText,
 } from "reactstrap";
+import "../App.css";
 
 // function Jobs() {
 //     // 👇️ get ID from url
@@ -73,6 +74,16 @@ class Starter extends React.Component {
                                         tag="h5"
                                         className="border-bottom"
                                     >
+                                        <div className="rating">
+                                            <input
+                                                type="checkbox"
+                                                value={`${item.opening_id}`}
+                                                id={`${item.opening_id}`}
+                                            ></input>
+                                            <label for={`${item.opening_id}`}>
+                                                ☆
+                                            </label>
+                                        </div>
                                         {item.posting_title}
                                     </CardTitle>
                                     <CardText
