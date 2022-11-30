@@ -67,7 +67,7 @@ class Starter extends React.Component {
                                             marginBottom: "10px",
                                             border: "2px solid black",
                                             // borderRadius: "25px",
-                                            objectFit: "cover"
+                                            objectFit: "cover",
                                         }}
                                     ></img>
                                     <CardTitle
@@ -79,6 +79,7 @@ class Starter extends React.Component {
                                                 type="checkbox"
                                                 value={`${item.opening_id}`}
                                                 id={`${item.opening_id}`}
+                                                autocomplete="off"
                                             ></input>
                                             <label for={`${item.opening_id}`}>
                                                 ☆
