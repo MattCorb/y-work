@@ -45,7 +45,28 @@ const Apply = () => {
                         </CardTitle>
                         <CardBody className="p-4" key={item.opening_id}>
                             <Row justify-content>
-                                <Col lg="6">
+                                  <img
+                                      src={`${item.img}`}
+                                      height="300px"
+                                      width="auto"
+                                      style={{
+                                          float: "none",
+                                          margin: "auto",
+                                          // marginTop: "30px",
+                                          // marginLeft: "20px",
+                                          // marginRight:"20px",
+                                          padding: "0px",
+                                          border: "2px solid black",
+                                          // borderRadius: "25px",
+                                          objectFit: "cover"
+                                      }}
+                                  ></img>
+                            </Row>
+                            <Row justify-content>
+                                  {/* <div>
+                                    
+                                  </div> */}
+                                {/* <Col lg="6"> */}
                                     <h2 className="mt-4">
                                         {item.posting_title}
                                     </h2>
@@ -118,26 +139,16 @@ const Apply = () => {
                                     <br />
                                     <Button
                                         className="mt-3 btn btn-secondary"
-                                        color="primary"
+                                        color="success"
                                         href="https://wrappixel.com/templates/materialpro-react-admin/?ref=33"
                                         target="_blank"
                                     >
                                         Submit
                                     </Button>
-                                </Col>
-                                <Col lg="4">
-                                    <img
-                                        src={`${item.img}`}
-                                        height="300px"
-                                        style={{
-                                            float: "left",
-                                            margin: "auto",
-                                            marginTop: "30px",
-                                            border: "2px solid black",
-                                            borderRadius: "25px",
-                                        }}
-                                    ></img>
-                                </Col>
+                                {/* </Col> */}
+                                {/* <Col lg="4"> */}
+                                    
+                                {/* </Col> */}
                             </Row>
                         </CardBody>
                     </Card>
