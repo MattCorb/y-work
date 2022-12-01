@@ -35,9 +35,9 @@ const Header = () => {
                 <div className="d-lg-block d-none me-5 pe-3">
                     <Logo />
                 </div>
-                <NavbarBrand href="/">
+                {/* <NavbarBrand href="/">
                     <LogoWhite className=" d-lg-none" />
-                </NavbarBrand>
+                </NavbarBrand> */}
                 <Button
                     color="primary"
                     className=" d-lg-none"

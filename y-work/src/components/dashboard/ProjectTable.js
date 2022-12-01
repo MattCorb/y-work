@@ -1,3 +1,4 @@
+import React, { useEffect, useMemo, useState } from "react";
 import { Card, CardBody, CardTitle, CardSubtitle, Table } from "reactstrap";
 import user1 from "../../assets/images/users/user1.jpg";
 import user2 from "../../assets/images/users/user2.jpg";
@@ -54,46 +55,65 @@ const tableData = [
 ];
 
 const ProjectTables = () => {
+  let APIUrl =
+        "https://g5pp6siiwl.execute-api.us-east-1.amazonaws.com/opening";
+    console.log(APIUrl);
+
+  const getAPI = async () => {
+      const response = await fetch(APIUrl);
+      const jsonData = await response.json();
+
+      setUserData(jsonData);
+  };
+
+  const [userData, setUserData] = useState([]);
+
+  // Add default value on page load
+  useEffect(() => {
+      getAPI();
+  }, []);
+
   return (
+    
     <div>
       <Card>
         <CardBody>
-          <CardTitle tag="h5">Project Listing</CardTitle>
+          <CardTitle tag="h5">Job Applications</CardTitle>
           <CardSubtitle className="mb-2 text-muted" tag="h6">
-            Overview of the projects
+            Application Submission Status
           </CardSubtitle>
-
-          <Table className="no-wrap mt-3 align-middle" responsive borderless>
+       <Table className="no-wrap mt-3 align-middle" responsive borderless>
             <thead>
               <tr>
-                <th>Team Lead</th>
-                <th>Project</th>
-
+                <th>Job</th>
+                {/* <th>Job</th> */}
+                <th>Start Date</th>
+                <th>Wage</th>
                 <th>Status</th>
-                <th>Weeks</th>
-                <th>Budget</th>
               </tr>
             </thead>
             <tbody>
-              {tableData.map((tdata, index) => (
-                <tr key={index} className="border-top">
+      {userData
+        .filter((userData) => userData.opening_id < 3)
+        .map((item) => (
+                <tr key={item.opening_id} className="border-top">
                   <td>
                     <div className="d-flex align-items-center p-2">
                       <img
-                        src={tdata.avatar}
+                        src={item.img}
                         className="rounded-circle"
                         alt="avatar"
                         width="45"
                         height="45"
                       />
                       <div className="ms-3">
-                        <h6 className="mb-0">{tdata.name}</h6>
-                        <span className="text-muted">{tdata.email}</span>
+                        <h6 className="mb-0">{item.posting_title}</h6>
+                        <span className="text-muted">{item.department}</span>
                       </div>
                     </div>
                   </td>
-                  <td>{tdata.project}</td>
-                  <td>
+                  {/* <td>{item.category}</td> */}
+                  {/* <td>
                     {tdata.status === "pending" ? (
                       <span className="p-2 bg-danger rounded-circle d-inline-block ms-3"></span>
                     ) : tdata.status === "holt" ? (
@@ -101,17 +121,21 @@ const ProjectTables = () => {
                     ) : (
                       <span className="p-2 bg-success rounded-circle d-inline-block ms-3"></span>
                     )}
+                  </td> */}
+                  <td>{item.start_date}</td>
+                  <td>${item.min_salary}-${item.max_salary}</td>
+                  <td>
+                  <span className="p-2 bg-success rounded-circle d-inline-block ms-3"></span>
                   </td>
-                  <td>{tdata.weeks}</td>
-                  <td>{tdata.budget}</td>
-                </tr>
-              ))}
+                </tr>  
+                ))
+              }
             </tbody>
           </Table>
         </CardBody>
       </Card>
     </div>
-  );
-};
+  )
+}
 
 export default ProjectTables;

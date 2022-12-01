@@ -11,17 +11,17 @@ const navigation = [
   },
   {
     title: "Saved Jobs",
-    href: "/alerts",
+    href: "/saved",
     icon: "bi bi-star",
   },
   {
     title: "Recommendations",
-    href: "/badges",
+    href: "/recommend",
     icon: "bi bi-patch-check",
   },
   {
     title: "Applications",
-    href: "/buttons",
+    href: "/applications",
     icon: "bi bi-hdd-stack",
   },
   {

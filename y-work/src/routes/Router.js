@@ -10,8 +10,8 @@ const Starter = lazy(() => import("../views/Starter.js"));
 const Apply = lazy(() => import("../views/Apply.js"));
 const Test = lazy(() => import("../views/Test.js"));
 const Test2 = lazy(() => import("../views/Test2.js"));
-const Alerts = lazy(() => import("../views/Alerts"));
-const Badges = lazy(() => import("../views/ui/Badges"));
+const Saved = lazy(() => import("../views/Saved.js"));
+const Recommend = lazy(() => import("../views/Recommend.js"));
 const Buttons = lazy(() => import("../views/ui/Buttons"));
 const Cards = lazy(() => import("../views/ui/Cards"));
 const Grid = lazy(() => import("../views/ui/Grid"));
@@ -33,8 +33,8 @@ const ThemeRoutes = [
             { path: "/starter/*", exact: true, element: <Starter /> },
             { path: "/apply", exact: true, element: <Apply /> },
             // { path: "/apply/:opening_id", exact: true, element: <Apply /> },
-            { path: "/alerts", exact: true, element: <Alerts /> },
-            { path: "/badges", exact: true, element: <Badges /> },
+            { path: "/saved", exact: true, element: <Saved /> },
+            { path: "/recommend", exact: true, element: <Recommend /> },
             { path: "/buttons", exact: true, element: <Buttons /> },
             { path: "/cards", exact: true, element: <Cards /> },
             { path: "/grid", exact: true, element: <Grid /> },
