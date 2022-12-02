@@ -215,7 +215,7 @@ const Test3 = () => {
                             onChange={handleShiftChange}
                             className="form-select"
                         >
-                            <option value="">All</option>
+                            <option value="">--</option>
                             <option value="Flexible">Flexible</option>
                             <option value="Late Night (After 10 PM)">
                                 Late Night (After 10 PM)

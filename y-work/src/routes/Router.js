@@ -10,6 +10,8 @@ const Starter = lazy(() => import("../views/Starter.js"));
 const Apply = lazy(() => import("../views/Apply.js"));
 const Test = lazy(() => import("../views/Test.js"));
 const Test2 = lazy(() => import("../views/Test2.js"));
+const Test3 = lazy(() => import("../views/Test3.js"));
+const Saved = lazy(() => import("../saved.js"));
 const Alerts = lazy(() => import("../views/ui/Alerts"));
 const Badges = lazy(() => import("../views/ui/Badges"));
 const Buttons = lazy(() => import("../views/ui/Buttons"));
@@ -30,9 +32,10 @@ const ThemeRoutes = [
             { path: "/", element: <Navigate to="/starter" /> },
             { path: "/test", exact: true, element: <Test /> },
             { path: "/test2", exact: true, element: <Test2 /> },
+            { path: "/test3", exact: true, element: <Test3 /> },
+            { path: "/saved", exact: true, element: <Saved /> },
             { path: "/starter/*", exact: true, element: <Starter /> },
             { path: "/apply", exact: true, element: <Apply /> },
-            // { path: "/apply/:opening_id", exact: true, element: <Apply /> },
             { path: "/alerts", exact: true, element: <Alerts /> },
             { path: "/badges", exact: true, element: <Badges /> },
             { path: "/buttons", exact: true, element: <Buttons /> },
