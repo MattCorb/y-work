@@ -26,7 +26,7 @@ const navigation = [
   },
   {
     title: "Your Info",
-    href: "/cards",
+    href: "/info",
     icon: "bi bi-people",
   },
   // {
