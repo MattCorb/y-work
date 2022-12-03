@@ -145,7 +145,7 @@ const Test3 = () => {
 
     return (
         <div className="app">
-            <div className="mb-3 col-4">
+            <div className="mb-3 col-lg-4 col-md-6">
                 <button
                     className="k-button btns btn-filter btn-primary"
                     onClick={() => setHidden((s) => !s)}
@@ -156,7 +156,7 @@ const Test3 = () => {
                 </button>
             </div>
             <div className="row">
-                <div className="mb-3 col-4">
+                <div className="mb-3 col-lg-4 col-md-6">
                     <label className="form-label" for="search">
                         Search:
                     </label>
@@ -169,7 +169,7 @@ const Test3 = () => {
                         onChange={handleSearch}
                     ></input>
                 </div>
-                <div className="mb-3 col-4">
+                <div className="mb-3 col-lg-4 col-md-6">
                     <label className="form-label" for="category-list">
                         Sort:
                     </label>
@@ -199,9 +199,9 @@ const Test3 = () => {
 
             {!hidden ? (
                 <div className="filter-container row">
-                    <div className="mb-3 col-4">
+                    <div className="mb-3 col-lg-4 col-md-6">
                         <label className="form-label" for="category-list">
-                            Filter by Category:
+                            Filter Category:
                         </label>
                         <select
                             name="category-list"
@@ -216,9 +216,9 @@ const Test3 = () => {
                             <option value="MTC">MTC</option>
                         </select>
                     </div>
-                    <div className="mb-3 col-4">
+                    <div className="mb-3 col-lg-4 col-md-6">
                         <label className="form-label" for="category-list">
-                            Filter by Department:
+                            Filter Department:
                         </label>
                         <select
                             name="category-list"
@@ -244,7 +244,7 @@ const Test3 = () => {
                             </option>
                         </select>
                     </div>
-                    <div className="mb-3 col-4">
+                    <div className="mb-3 col-lg-4 col-md-6">
                         <label className="form-label" for="category-list">
                             Filter Shift:
                         </label>
