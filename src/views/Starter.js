@@ -201,7 +201,7 @@ const Test3 = () => {
                 <div className="filter-container row">
                     <div className="mb-3 col-4">
                         <label className="form-label" for="category-list">
-                            Filter by Category:
+                            Filter Category:
                         </label>
                         <select
                             name="category-list"
@@ -218,7 +218,7 @@ const Test3 = () => {
                     </div>
                     <div className="mb-3 col-4">
                         <label className="form-label" for="category-list">
-                            Filter by Department:
+                            Filter Department:
                         </label>
                         <select
                             name="category-list"
