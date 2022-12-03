@@ -32,7 +32,7 @@ const Header = () => {
     return (
         <Navbar color="primary" dark expand="md" className="fix-header">
             <div className="d-flex align-items-center">
-                <div className="d-lg-block d-none me-5 pe-3">
+                <div className="d-lg-block d-none">
                     <Logo />
                 </div>
                 {/* <NavbarBrand href="/">

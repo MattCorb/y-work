@@ -27,7 +27,6 @@ const Test3 = () => {
     const [selectedCategory, setSelectedCategory] = useState();
     const [selectedDepartment, setSelectedDepartment] = useState();
     const [selectedShift, setSelectedShift] = useState();
-    const [searchTerm, setSearchTerm] = useState();
     const [sortValue, setSortValue] = useState();
     const [hidden, setHidden] = useState(true);
 
@@ -50,9 +49,6 @@ const Test3 = () => {
     }
     function handleSortChange(event) {
         setSortValue(event.target.value);
-    }
-    function handleSearch(event) {
-        setSearchTerm(event.target.value);
     }
 
     //SEPARATE EXPERIMENTATION
@@ -82,27 +78,6 @@ const Test3 = () => {
     const filterShift = () => {
         if (selectedShift) {
             return filteredList.filter((item) => item.shift === selectedShift);
-        }
-        return filteredList;
-    };
-
-    const searchJobs = () => {
-        if (searchTerm) {
-            return filteredList.filter(
-                (item) =>
-                    item.job_description
-                        .toLowerCase()
-                        .indexOf(searchTerm.toLowerCase()) != -1 ||
-                    item.posting_title
-                        .toLowerCase()
-                        .indexOf(searchTerm.toLowerCase()) != -1 ||
-                    item.department
-                        .toLowerCase()
-                        .indexOf(searchTerm.toLowerCase()) != -1 ||
-                    item.shift
-                        .toLowerCase()
-                        .indexOf(searchTerm.toLowerCase()) != -1
-            );
         }
         return filteredList;
     };
@@ -139,36 +114,22 @@ const Test3 = () => {
 
     filteredList = useMemo(filterShift, [selectedShift, filteredList]);
 
-    filteredList = useMemo(searchJobs, [searchTerm, filteredList]);
-
     var sortedList = useMemo(sortData, [sortValue, filteredList]);
 
     return (
         <div className="app">
-            <div className="mb-3 col-4">
-                <button
-                    className="k-button btns btn-filter btn-primary"
-                    onClick={() => setHidden((s) => !s)}
-                    style={{ height: "40px", marginRight: "5px" }}
-                >
-                    <FilterComp className="filtercomp" />
-                    FILTER
-                </button>
-            </div>
             <div className="row">
                 <div className="mb-3 col-4">
-                    <label className="form-label" for="search">
-                        Search:
-                    </label>
-                    <input
-                        type="text"
-                        id="search"
-                        name="search"
-                        className="form-control"
-                        placeHolder="Search for..."
-                        onChange={handleSearch}
-                    ></input>
+                    <button
+                        className="k-button btns btn-filter btn-primary"
+                        onClick={() => setHidden((s) => !s)}
+                        style={{ height: "40px", marginRight: "5px" }}
+                    >
+                        <FilterComp className="filtercomp" />
+                        FILTER
+                    </button>
                 </div>
+                <div className="mb-3 col-4"></div>
                 <div className="mb-3 col-4">
                     <label className="form-label" for="category-list">
                         Sort:
@@ -254,7 +215,7 @@ const Test3 = () => {
                             onChange={handleShiftChange}
                             className="form-select"
                         >
-                            <option value="">All</option>
+                            <option value="">--</option>
                             <option value="Flexible">Flexible</option>
                             <option value="Late Night (After 10 PM)">
                                 Late Night (After 10 PM)
