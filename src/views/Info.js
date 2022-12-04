@@ -37,8 +37,6 @@ const Info = () => {
                         <Col m="6" lg="4">
                             <img
                                 src={`${user5}`}
-                                height="300px"
-                                width="auto"
                                 style={{
                                     float: "none",
                                     margin: "auto",
@@ -53,12 +51,12 @@ const Info = () => {
                             ></img>
                         </Col>
 
-                        <Col m="6" lg="4">
+                        <Col m="6" lg="6">
                             {/* <div>
                                     
                                   </div> */}
                             {/* <Col lg="6"> */}
-                            <h1 className="mt-4">Dan Smith</h1>
+                            <h1 className="">Dan Smith</h1>
                             <h4 className="mb-4">Account Info</h4>
 
                             <div className="mb-3">
